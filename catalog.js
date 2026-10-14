@@ -1,0 +1,26 @@
+export const sites = [
+['sandspiel','Sandspiel','Paint a world of sand, fire, and little experiments.','Make something','https://sandspiel.club/'],
+['radio-garden','Radio Garden','Spin the globe and tune into somewhere else.','Listen','https://radio.garden/'],
+['patatap','Patatap','Turn your keyboard into a sound and color playground.','Make something','https://patatap.com/'],
+['quick-draw','Quick, Draw!','Can a neural network guess your doodle?','Play','https://quickdraw.withgoogle.com/'],
+['mystic-square','Mystic Square','A tiny sliding puzzle with a satisfying challenge.','Play','https://sliding.toys/mystic-square/8-puzzle/'],
+['optical-toys','Optical Toys','Give your eyes something delightfully confusing.','Explore','https://optical.toys/'],
+['ragebait','Ragebait','A strange little experiment from R74n.','Explore','https://r74n.com/mini/ragebait'],
+['gentown','Gentown','See what a generated little town has in store.','Explore','https://r74n.com/gentown/'],
+['sandboxels','Sandboxels','A pixel sandbox for curious experiments.','Make something','https://neal.fun/sandboxels/'],
+['openfront','OpenFront','A multiplayer strategy world to jump into.','Play','https://openfront.io/'],
+['krillion','Krillion','Dive into an online game and see what happens.','Play','https://krillion.io/'],
+['unusual-articles','Unusual Wikipedia','Follow a rabbit hole of wonderfully unusual articles.','Explore','https://en.wikipedia.org/wiki/Wikipedia:Unusual_articles'],
+['cat-bounce','Cat Bounce','Exactly as advertised. A lot more cats than expected.','Cats','https://cat-bounce.com/'],
+['wiki-game','The Wiki Game','Find your way between articles, one link at a time.','Play','https://www.thewikigame.com/play/'],
+['little-alchemy','Little Alchemy 2','Mix simple elements into surprising discoveries.','Make something','https://littlealchemy2.com/'],
+['futureme','FutureMe','Send a little time capsule to your future self.','Explore','https://www.futureme.org/'],
+['space','People in Space','Find out how many humans are above us right now.','Explore','https://www.howmanypeopleareinspacerightnow.com/'],
+['music-map','Music Map','Let one favorite artist lead you to another.','Listen','https://www.music-map.com/'],
+['true-size','The True Size','Move countries around. Rethink the map.','Explore','https://thetruesize.com/'],
+['friday','Is It Friday Yet?','One question. A very important answer.','Explore','https://isitfridayyet.net/'],
+['wigglypaint','WigglyPaint','Draw something with a little wiggle in it.','Make something','https://wigglypaint.net/'],
+['kittytoy','Kittytoy','A little cat-shaped escape from the ordinary.','Cats','https://rakqoi.itch.io/kittytoy'],
+['cat-cafe','An Average Day at the Cat Cafe','Spend a little time in a cat cafe game.','Cats','https://zephyo.itch.io/an-average-day-at-the-cat-cafe']
+].map(([id,name,description,category,url])=>({id,name,description,category,url}));
+export function remainingSites(catalog, discovered) {return catalog.filter(site=>!discovered.includes(site.id));}
