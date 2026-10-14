@@ -1,0 +1,15 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url);
+const read=name=>readFile(new URL(name,root),'utf8');
+let html=await read('index.html');
+const fonts=await read('fonts.css');
+const license=await read('FONT-LICENSE.txt');
+const css=await read('style.css');
+const catalog=(await read('catalog.js')).replace(/export /g,'');
+const artwork=(await read('artwork.js')).replace(/export /g,'');
+const app=(await read('app.js')).replace(/^import .*;\n/gm,'');
+html=html.replace('<link rel="stylesheet" href="fonts.css">',`<style>\n/* ${license} */\n${fonts}</style>`);
+html=html.replace('<link rel="stylesheet" href="style.css">',`<style>${css}</style>`);
+html=html.replace('<script type="module" src="app.js"></script>',`<script>\n${catalog}\n${artwork}\n${app}\n</script>`);
+await writeFile(new URL('preview.html',root),html);
+console.log('Updated standalone preview.html with embedded artwork and pixel font.');
