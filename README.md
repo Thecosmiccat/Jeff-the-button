@@ -12,6 +12,10 @@ No build or dependency installation is needed. Run `python3 -m http.server 8000`
 
 `npm test` checks catalog integrity, discovery exhaustion, migration, category selection, favorites, and search. Browser verification also covered desktop/mobile layouts, real font loading, persistence, popup blocking, reduced-motion fallback, the animated ending, and the standalone preview. External games were researched from their creators’ pages; their gameplay was not automatically tested.
 
+## Design
+
+The page centers Jeff’s supplied artwork and uses a numbered link collection, plain copy, and a restrained palette from his red collar. Monocraft stays in selected headings and counters. See [DESIGN-NOTES.md](DESIGN-NOTES.md) for the research, audit, decisions, and rules for future changes.
+
 ## Features
 
 - The two supplied Jeff states, original pixel confetti, and a completion animation.
@@ -24,7 +28,7 @@ No build or dependency installation is needed. Run `python3 -m http.server 8000`
 
 ## Maintain the catalog
 
-Add an entry to `catalog.js` with a unique, stable ID, name, original description, category, and HTTPS URL. Set grouping/game metadata as appropriate. Keep existing IDs stable to preserve progress. Removed IDs are ignored in counters and collections; remaining IDs are retained. The total updates automatically. Update `fresh` metadata and featured teaser copy when changing the new-game selection.
+Add an entry to `catalog.js` with a unique, stable ID, name, original description, category, and HTTPS URL. Set grouping/game metadata as appropriate. Keep existing IDs stable to preserve progress. Removed IDs are ignored in counters and collections; remaining IDs are retained. The total updates automatically. The `fresh` metadata records the previous additions; discovery does not depend on it.
 
 A successfully opened tab counts as a discovery; the application cannot inspect cross-origin games or confirm that a visitor played one. A blocked popup consumes no discovery. Tabs open during a direct click with their opener detached.
 
