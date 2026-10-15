@@ -27,7 +27,7 @@ function burst(){
  if(reducedMotion)return;$('particles').replaceChildren();
  for(let i=0;i<18;i++){const particle=document.createElement('i');particle.className='particle';const angle=i/18*Math.PI*2,distance=80+Math.random()*85;
  particle.style.setProperty('--x',`${Math.cos(angle)*distance}px`);particle.style.setProperty('--y',`${Math.sin(angle)*distance-20}px`);
- particle.style.background=['#952d23','#b07340','#d9b340','#6c5847'][i%4];$('particles').append(particle);}
+ particle.style.background=['#b63125','#f4d45b','#304eaa','#e292b7'][i%4];$('particles').append(particle);}
  setTimeout(()=>$('particles').replaceChildren(),900);
 }
 function setFavoriteButton(button,site){const active=favorites.includes(site.id);button.textContent=active?'★':'☆';button.setAttribute('aria-pressed',String(active));button.setAttribute('aria-label',`${active?'Remove':'Add'} ${site.name} ${active?'from':'to'} favorites`);}
@@ -45,7 +45,7 @@ function renderCollection(){
  else if(showFavorites&&!favorites.some(id=>found.some(site=>site.id===id))){$('empty-title').textContent='No favorites yet.';$('empty-description').textContent='Use the star beside a find to save it here.';$('empty-action').hidden=true;}
  else{$('empty-title').textContent='Nothing matches that search.';$('empty-description').textContent='Try another word or choose All kinds.';$('empty-action').hidden=true;}
  for(const site of visible){
- const card=document.createElement('article');card.className='card';card.dataset.id=site.id;
+ const card=document.createElement('article');card.className='card';card.dataset.id=site.id;card.dataset.group=site.group;
  const number=document.createElement('span');number.className='find-number';number.setAttribute('aria-hidden','true');
  const knownHistory=discovered.filter(id=>sites.some(item=>item.id===id));number.textContent=String(knownHistory.indexOf(site.id)+1).padStart(2,'0');
  const content=document.createElement('div');content.className='find-main';

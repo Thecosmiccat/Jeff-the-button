@@ -38,7 +38,7 @@ These are design judgments about this site, rather than universal rules against 
 
 - Keep Jeff as the main visual and action. Do not add a second primary call to action.
 - Keep the original cat artwork and its normal/pressed states.
-- Use the red accent for Jeff’s identity, links, and progress. Extra colors need a content-related reason.
+- Use collar red for identity, bell yellow for the play area, blue for the escape plan, and category colors for finds. Keep text contrast strong in both themes.
 - Keep pixel typography selective. Body descriptions should remain easy to scan.
 - Display actual discoveries, actual counts, and useful states. Avoid invented popularity figures or decorative dashboards.
 - Add a feature when it helps discovery or revisiting; avoid adding sections solely to make the page longer.
@@ -47,3 +47,7 @@ These are design judgments about this site, rather than universal rules against 
 ## Verification
 
 The revision is checked with the existing catalog tests and browser checks for initial, populated, searched, favorites-only, blocked-popup, storage-unavailable, and complete states. Responsive checks cover 320, 390, 768, and 1440 pixels. The standalone preview embeds the source, supplied artwork, and licensed font. These checks verify implementation and layout; judging the visual personality remains subjective and would benefit from feedback from actual visitors.
+
+## Color revision after feedback
+
+The first simplification became too neutral and quiet for a playful cat button. Restored large areas of color: a collar-red masthead, a bell-yellow play area, a blue progress note, a lilac collection heading, and category-colored discovery numbers. The useful structure remains a direct cat interaction and a searchable link list. Color supports the playful premise; reducing generic design does not require reducing the palette to gray.

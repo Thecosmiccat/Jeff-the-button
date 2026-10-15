@@ -14,7 +14,7 @@ No build or dependency installation is needed. Run `python3 -m http.server 8000`
 
 ## Design
 
-The page centers Jeff’s supplied artwork and uses a numbered link collection, plain copy, and a restrained palette from his red collar. Monocraft stays in selected headings and counters. See [DESIGN-NOTES.md](DESIGN-NOTES.md) for the research, audit, decisions, and rules for future changes.
+The page centers Jeff’s supplied artwork and uses a numbered link collection, plain copy, and a bright poster palette: collar red, bell yellow, blue progress notes, and category-colored finds. Monocraft stays in selected headings and counters. See [DESIGN-NOTES.md](DESIGN-NOTES.md) for the research, audit, decisions, and rules for future changes.
 
 ## Features
 
